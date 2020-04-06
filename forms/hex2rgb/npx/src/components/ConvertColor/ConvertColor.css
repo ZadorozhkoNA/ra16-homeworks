@@ -1,0 +1,24 @@
+.ConvertColor-background {
+    height: 100vh;
+    display: flex;
+}
+
+.ConvertColor-form {
+    width: 300px;
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.ConvertColor-form_label {
+    font-weight: 600;
+    min-width: 200px;
+    flex: 0 0 auto;
+}
+
+.ConvertColor-form_input {
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 10px;
+}
