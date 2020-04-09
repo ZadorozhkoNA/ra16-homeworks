@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {nanoid} from 'nanoid';
 import Table from './Table';
+import Form from './Form';
+import './style.css';
 
 export default function Logic ()  {
 
@@ -64,8 +66,11 @@ export default function Logic ()  {
     }
 
         return (     
-            <div>   
-                <Table funcSubmit = { workArray } funcDel = { delData } state = {steps}/>
-            </div> 
+            <div className = 'Table-background'>
+                <div className = 'Table-box'> 
+                    <Form funcSubmit = { workArray } /> 
+                    <Table funcDel = { delData } state = {steps}/>
+                </div>
+            </div>
         );
 }
