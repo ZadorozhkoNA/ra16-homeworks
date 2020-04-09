@@ -1,9 +1,11 @@
 import React from 'react';
+import ShopCard from './ShopCard';
 
 export default function CardsView ( props ) {
-    let {cards} = props
+    const data = props.props;    
     return (
-
-    null  
-    )
+        <div className = 'cardsView-box'>
+            {data.map((item) => <ShopCard props = {item} /> )}
+        </div>
+    );
 }

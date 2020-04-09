@@ -1,0 +1,70 @@
+.store-box {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listView-table {
+    display: block;
+    width: 100%;
+}
+
+.cardsView-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.shopCard-box {
+    width: 120px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.shopCard-name,
+.shopItem-cell_name {
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.shopCard-color,
+.shopItem-cell_color {
+    font-size: 12px;
+    text-align: center;
+}
+
+.shopItem-cell_img {
+    width: 80px;
+}
+
+.shopCard-img,
+.shopItem-img {
+    width: 100%;
+}
+
+
+.shopCard-footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.shopCard-button,
+.shopItem-cell_button {
+    font-size: 12px;
+}
+
+.iconSwitch-button {
+    margin-left: auto;
+}
+
+.iconSwitch-button:hover {
+    color: green;
+}
+

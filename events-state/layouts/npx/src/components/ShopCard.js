@@ -1,22 +1,20 @@
 import React from 'react';
 
 export default function ShopCard ( props ) {
-
-    let arrayProducts = props.map( (item, index) => 
-        <div key={index}>
-          <img alt={item.name} src={item.img} />
-          <div>
-            <h2>{item.name}</h2>
-            <p>{item.color}</p>
-          </div>
-          <div>                    
-            <p>${item.price}</p>
-            <button>Add to card</button>
-           </div>
-        </div> 
-    );
-
+    let data = props.props
     return (
-        <div> {arrayProducts} </div>
-      );
-};
+        <div className = 'shopCard-box'>
+            <div class = 'shopCard-name'>
+                {data.name}
+            </div>
+            <div class = 'shopCard-color'>
+                {data.color}
+            </div>
+            <img className = 'shopCard-img' src = {data.img} alt = {data.name} />
+            <div className = 'shopCard-footer'>
+                <div className = 'shopCard-price'>{`$${data.price}`}</div>
+                <button className = 'shopCard-button'>Add to cart</button>
+            </div>
+        </div>
+    );
+}

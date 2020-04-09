@@ -1,33 +1,22 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import IconSwitch from './IconSwitch';
-// import ShopItem from './ShopItem'
-import ShopCard from './ShopCard';
-// import ListView from './ListView'
+import ListView from './ListView';
 import CardsView from './CardsView';
-import { products } from './data';
-// import PropTypes from 'prop-types'
 
-export default class Store extends Component {
-    constructor ( props ) {
-        super ( props )
-        this.state = {
-            icon: 'view_list'
-          }
-    }
+export default function Store (props) {
+    const [icon, setIcon] = useState( 'view_list' );
+    let products = props.props;
+
+    const handleClick = event => {
+        event.preventDefault();
+        setIcon(prevState => prevState === 'view_list' ? 'view_module' : 'view_list' )
+        };
     
-    switch = () => {
-        this.state.icon === "view_list" ? this.setState({icon: "view_module"}) : this.setState({icon: "view_list"})
-    }
 
-    render() {
-        return (
-            <div>
-                <IconSwitch icon={this.state.icon} onSwitch={this.switch} />
-                <CardsView cards={products} />
-                {/* <CardsView cards={<ShopCard products={products}/>} /> */}
-             
-            </div>
-        );
-    }
+    return (
+        <div className = 'store-box' >
+            <IconSwitch icon={icon} onSwitch={handleClick}/>
+            {icon === 'view_list' ? <CardsView props={products}/> : <ListView props = {products} />}       
+        </div>
+    );
 }
-

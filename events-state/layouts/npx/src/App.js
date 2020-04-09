@@ -1,14 +1,14 @@
 import React from 'react';
+import {products} from './components/products';
 import Store from './components/Store';
-import {products} from './components/data';
+import './components/styl.css';
 import './App.css';
 
-
 function App() {
-  
+
   return (
-    <Store props={products}/>
-  );
+    <Store props={products} /> 
+    );
 }
 
 export default App;
