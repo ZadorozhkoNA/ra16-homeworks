@@ -14,7 +14,7 @@ class Portfolio extends React.Component {
       }
     }
     handlerToggle = (filter) => {
-     let filteredProjects = (filter === filters[0]) ? projects : projects.filter(item => item.category === filter)
+      const filteredProjects = (filter === filters[0]) ? projects : projects.filter(item => item.category === filter)
       this.setState({
         selected: filter,
         projects: filteredProjects,
