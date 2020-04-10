@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function ShopCard ( props ) {
-    let data = props.props
+    const data = props.objItem
     return (
         <div className = 'shopCard-box'>
             <div class = 'shopCard-name'>
@@ -18,3 +19,7 @@ export default function ShopCard ( props ) {
         </div>
     );
 }
+
+ShopCard.propTypes = {
+    objItem: PropTypes.object.isRequired
+  }

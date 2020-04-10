@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import IconSwitch from './IconSwitch';
 import ListView from './ListView';
 import CardsView from './CardsView';
+import PropTypes from 'prop-types';
 
 export default function Store (props) {
     const [icon, setIcon] = useState( 'view_list' );
-    let products = props.props;
+    const products = props.products;
 
     const handleClick = event => {
         event.preventDefault();
@@ -16,7 +17,11 @@ export default function Store (props) {
     return (
         <div className = 'store-box' >
             <IconSwitch icon={icon} onSwitch={handleClick}/>
-            {icon === 'view_list' ? <CardsView props={products}/> : <ListView props = {products} />}       
+            {icon === 'view_list' ? <CardsView products={products}/> : <ListView products = {products} />}       
         </div>
     );
 }
+
+Store.propTypes = {
+    products: PropTypes.array.isRequired
+  }

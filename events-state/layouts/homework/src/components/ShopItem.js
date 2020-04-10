@@ -1,8 +1,10 @@
 import React from 'react';
 import {nanoid} from 'nanoid';
+import PropTypes from 'prop-types';
+
 
 export default function ShopItem (props) {
-    const data = props.props;
+    const data = props.objItem;
     return (
             <tr key = {nanoid()}>
             <td key = {nanoid()} className = 'shopItem-cell_img cell'>
@@ -23,3 +25,7 @@ export default function ShopItem (props) {
         </tr>
     );
 }
+
+ShopItem.propTypes = {
+    objItem: PropTypes.object.isRequired
+  }

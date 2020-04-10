@@ -1,7 +1,7 @@
 import React from 'react';
 import Toolbar from './Toolbar';
 import ProjectList from './ProjectList';
-import {filters, projects} from './date'
+import {filters, projects} from './projectListData';
 import PropTypes from 'prop-types'
 
 class Portfolio extends React.Component {
@@ -14,10 +14,10 @@ class Portfolio extends React.Component {
       }
     }
     handlerToggle = (filter) => {
-     let projs = (filter === filters[0]) ? projects : projects.filter(item => item.category === filter)
+     let filteredProjects = (filter === filters[0]) ? projects : projects.filter(item => item.category === filter)
       this.setState({
         selected: filter,
-        projects: projs
+        projects: filteredProjects,
       })
     }  
     render() {

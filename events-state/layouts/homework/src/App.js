@@ -7,7 +7,8 @@ import './App.css';
 function App() {
 
   return (
-    <Store props={products} /> 
+    // <Store props={products} /> 
+    <Store products={products} /> 
     );
 }
 
