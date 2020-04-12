@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './style.css';
 
 export default class Button extends Component {
@@ -20,13 +20,13 @@ export default class Button extends Component {
     bodyTable = (data = {}) => {
         if (data === {}) return;
         return (
-            <tr className = 'Table-list-row' key = {data.id}>
+            <tr className='Table-list-row' key = {data.id}>
                 <td>{data.date}</td>
                 <td>{data.distans}</td>
                 <td>
-                    <form onSubmit = {this.props.funcDel}>
-                        <input type = 'hidden' name = 'del' value = {data.id}/>
-                        <button className = 'Table-form-output_button'>Удалить</button>
+                    <form onSubmit={this.props.funcDel}>
+                        <input type='hidden' name='del' value={data.id}/>
+                        <button className='Table-form-output_button'>Удалить</button>
                     </form>
                 </td>
             </tr>

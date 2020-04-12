@@ -66,10 +66,10 @@ export default function Logic ()  {
     }
 
         return (     
-            <div className = 'Table-background'>
-                <div className = 'Table-box'> 
-                    <Form funcSubmit = { workArray } /> 
-                    <Table funcDel = { delData } state = {steps}/>
+            <div className='Table-background'>
+                <div className='Table-box'> 
+                    <Form funcSubmit={workArray} /> 
+                    <Table funcDel={delData} state={steps}/>
                 </div>
             </div>
         );

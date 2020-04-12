@@ -41,13 +41,13 @@ export class ConvertColor extends React.Component {
 
     render() {
         return (
-            <div style = {this.divStyle( this.state.colorRGB )} className = 'ConvertColor-background'>
-                <form className = 'ConvertColor-form'>
-                    <label className = 'ConvertColor-form_label' htmlFor='colorHEX'>Color HEX
-                        <input className = 'ConvertColor-form_input' id='hex' name='colorHEX' value={this.state.colorHEX} onChange={this.handleChange} />
+            <div style = {this.divStyle( this.state.colorRGB )} className='ConvertColor-background'>
+                <form className='ConvertColor-form'>
+                    <label className='ConvertColor-form_label' htmlFor='colorHEX'>Color HEX
+                        <input className='ConvertColor-form_input' id='hex' name='colorHEX' value={this.state.colorHEX} onChange={this.handleChange} />
                     </label>
-                    <label className = 'ConvertColor-form_label' htmlFor='colorRGB'>Color RGB
-                        <input className = 'ConvertColor-form_input' id='rgb' name='colorRGB' value={this.state.colorRGB} readonly/>
+                    <label className='ConvertColor-form_label' htmlFor='colorRGB'>Color RGB
+                        <input className='ConvertColor-form_input' id='rgb' name='colorRGB' value={this.state.colorRGB} readonly/>
                     </label>
                 </form>
             </div>
