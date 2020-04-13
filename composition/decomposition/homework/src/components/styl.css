@@ -1,0 +1,43 @@
+.App-flex {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.Topic-unorderList {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Topic-listItem,
+.ListItem-li {
+    display: block;
+    margin-right: 15px;
+}
+
+.ListItem-margin {
+    margin-left: 25px;
+}
+
+.Topic-listItem_bold {
+    font-weight: 900;
+}
+
+.ListItem-img {
+    margin-right: 10px;
+}
+
+.Form-form {
+    width: 100%;
+}
+
+.Main-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Widget-big {
+    font-size: 25px;
+}
