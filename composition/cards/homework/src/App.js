@@ -4,8 +4,12 @@ import data from './components/data';
 
 export default function App() {
   return (
-    data.map((item, index) => 
-      <Cards key={index} title={item.title} content={item.text} btnText={item.button}>{item.img}</Cards>
+    <>
+      <Cards title={data.title} content={data.text} btnText={data.button}>
+        <img src={data.img} className="card-img-top" alt={''}/>
+      </Cards>
+
+      <Cards title={data.title} content={data.text} btnText={data.button} />
+    </>
     )
-  );
 }
