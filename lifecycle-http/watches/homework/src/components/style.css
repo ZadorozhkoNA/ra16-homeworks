@@ -1,0 +1,33 @@
+.CreateTime-form_box {
+    padding: 20px;
+}
+
+.CreateTime-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.FormTimes-form_element {
+    margin-right: 10px;
+}
+
+.Watches-box {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.Watches-name {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.Watches-timer {
+    font-weight: 600;
+}
+
+.Watches-element {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

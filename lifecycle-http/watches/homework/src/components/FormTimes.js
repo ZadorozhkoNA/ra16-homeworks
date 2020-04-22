@@ -4,10 +4,10 @@ export default function FormTimes(props) {
 
     return (
         <form name='formTimes' onSubmit={props.funcSubmit}>
-            <label htmlFor='name'>Name</label>
-            <input name='name' />
-            <label htmlFor='UTC'>UTC</label>
-            <select name='UTC'>
+            <label className='FormTimes-form_element' htmlFor='name'>Name:</label>
+            <input className='FormTimes-form_element' name='name' />
+            <label className='FormTimes-form_element' htmlFor='UTC'>UTC:</label>
+            <select className='FormTimes-form_element' name='UTC'>
                 <option value='-12'>UTC -12:00</option>
                 <option value='-11'>UTC -11:00</option>
                 <option value='-10'>UTC -10:00</option>
@@ -34,7 +34,7 @@ export default function FormTimes(props) {
                 <option value='11'>UTC +11:00</option>
                 <option value='12'>UTC +12:00</option>
             </select>
-            <button>Add</button>           
+            <button className='FormTimes-form_element'>Add</button>           
         </form>
     )
 }
