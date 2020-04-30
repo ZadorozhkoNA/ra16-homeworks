@@ -1,0 +1,27 @@
+html, body {
+    font-size: 18px;
+}
+
+.App-box {
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.List-list {
+    padding: 0;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.List-item {
+    list-style: none;
+}
+
+.List-item:hover {
+    background-color: powderblue;
+}
+
+.Details-name {
+    color: blue;
+}
