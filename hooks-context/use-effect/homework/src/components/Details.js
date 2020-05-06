@@ -1,7 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
+import DetailsContext from '../context/DetailsContext';
 
-export default function Details(props) {
+export default function Details() {
 
+    const {urlDetails, userInfo} = useContext(DetailsContext);
     const [user, setUser] = useState({
         id: 0,
         name: '',
@@ -14,14 +16,14 @@ export default function Details(props) {
     });
 
     useEffect(() => {
-        fetch(`https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hooks-context/use-effect/data/${props.info.id}.json`)
+        fetch(`${urlDetails}${userInfo}.json`)
         .then((response) => {
             return response.json();       
         })
         .then((obj) => {
           setUser(obj);
         })
-    }, [props.info.id])
+    }, [userInfo])
 
     return (
         <div>
