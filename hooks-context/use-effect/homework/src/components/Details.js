@@ -1,11 +1,9 @@
-import React, {useEffect, useState, useContext} from 'react';
-import DetailsContext from '../context/DetailsContext';
+import React, {useEffect, useState} from 'react';
 
-export default function Details() {
+export default function Details(props) {
 
-    const {urlDetails, userInfo} = useContext(DetailsContext);
     const [user, setUser] = useState({
-        id: 0,
+        id: null,
         name: '',
         avatar: '',
         details: {
@@ -16,14 +14,14 @@ export default function Details() {
     });
 
     useEffect(() => {
-        fetch(`${urlDetails}${userInfo}.json`)
+        fetch(`${props.urlDetails}${props.userInfo.id}.json`)
         .then((response) => {
             return response.json();       
         })
         .then((obj) => {
           setUser(obj);
         })
-    }, [userInfo])
+    }, [props.userInfo])
 
     return (
         <div>

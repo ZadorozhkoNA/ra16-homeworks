@@ -1,13 +1,11 @@
-import React, {useState, useEffect, useContext} from 'react';
-import ListContext from '../context/ListContext';
+import React, {useState, useEffect} from 'react';
 
-export default function List() {
+export default function List(props) {
 
     const [usersList, setUsersList] = useState([]);
-    const {urlUsers, handleUserId} = useContext(ListContext);
 
     useEffect(() => {
-        fetch(urlUsers)
+        fetch(props.urlUsers)
         .then((response) => {
           return response.json();
         })
@@ -19,7 +17,7 @@ export default function List() {
     return (
         <ul className='List-list'>
             {usersList.map(item => 
-                <li className='List-item' key={item.id} onClick={()=>(handleUserId(item))}>
+                <li className='List-item' key={item.id} onClick={()=>(props.handleUserId(item))}>
                     {item.name}
                 </li>
             )}
